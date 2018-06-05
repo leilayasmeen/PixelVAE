@@ -23,9 +23,7 @@ import tflib.ops.linear
 import tflib.ops.batchnorm
 import tflib.ops.embedding
 
-import tflib.lsun_bedrooms
 import tflib.mnist_256
-import tflib.small_imagenet
 
 import numpy as np
 import tensorflow as tf

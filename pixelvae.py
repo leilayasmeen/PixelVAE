@@ -6,13 +6,7 @@ Ishaan Gulrajani, Kundan Kumar, Faruk Ahmed, Adrien Ali Taiga, Francesco Visin, 
 import os, sys
 sys.path.append(os.getcwd())
 
-N_GPUS = 4
-
-try: # This only matters on Ishaan's computer
-    import experiment_tools
-    experiment_tools.wait_for_gpu(tf=True, n_gpus=N_GPUS)
-except ImportError:
-    pass
+N_GPUS = 2
 
 import tflib as lib
 import tflib.train_loop_2
@@ -33,7 +27,7 @@ from scipy.misc import imsave
 import time
 import functools
 
-DATASET = 'mnist_256' # mnist_256, lsun_32, lsun_64, imagenet_64
+DATASET = 'mnist_256' # mnist_256
 SETTINGS = 'mnist_256' # mnist_256, 32px_small, 32px_big, 64px_small, 64px_big
 
 if SETTINGS == 'mnist_256':
